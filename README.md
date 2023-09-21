@@ -21,7 +21,7 @@ Then the webpage will be hosted at:
 ```
 http://localhost:3000/
 ```
-Just paste this into a web browser and the application will be running.
+Just paste this into a web browser and the application will be there.
 
 
 ## Time Spent
