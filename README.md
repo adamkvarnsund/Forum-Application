@@ -6,8 +6,8 @@ Created by Adam Kvarnsund
 
 To run the program the following technologies have to be installed:
 
-* Node.js
 * npm
+* Node.js
   
 [Installation guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
