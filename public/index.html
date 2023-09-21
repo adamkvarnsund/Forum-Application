@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/src/style.css">
+    <title>Chalmers Forums</title>
+</head>
+<body>
+    <header>
+        <img src="/images/chalmers-icon.svg" alt="">
+        <h1>Seddit</h1>
+    </header>
+    <label for="sortSelect">Sort by Title:</label>
+    <select id="sortSelect" onchange="sortOrder()">
+    <option value="ascending">Ascending</option>
+    <option value="descending">Descending</option>
+    </select>
+    <div class="post-container">
+        <h2>Create new post</h2>
+        <div class="post-form">
+            <textarea id="postHeader" placeholder="Write your title here"></textarea>
+            <textarea id="postContent" placeholder="Write your text here"></textarea>
+            <button class="post-button" onclick="addPost()">Post</button>
+        </div>
+        <h2>Posts</h2>
+        <div id="postList"></div>
+    </div>
+    <script src="../src/app.js"></script>
+</body>
+</html>

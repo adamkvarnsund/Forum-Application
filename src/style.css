@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#3B3B3B;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    padding: 2em;
+}
+
+.post-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 20px auto;
+    margin-bottom: 100px;
+    background-color: #1E1E1E;
+    padding: 20px;
+    border-radius: 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+.post-container h2{
+    width: 80%;
+}
+.post-form{
+    width: 80%;
+    margin-bottom: 20px;
+}
+#postContent{
+    height: 4em;
+    margin-bottom: 20px;
+}
+.post-date{
+    color: #808080;
+}
+.post-form textarea, .comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+    resize: none;
+}
+
+.post-button {
+    display: inline-block;
+    padding: 10px 40px;
+    background-color: yellow;
+    color: black;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+.comment-button, .edit-button, .delete-button{
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 20px 0 0;
+    background-color: yellow;
+    color: black;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+.edit-comment-button, .delete-comment-button{
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px 0 0;
+    background-color: yellow;
+    color: black;
+    font-weight: 600;
+    font-size: 0.7rem;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.post-button:hover, .comment-button:hover, .edit-button:hover, .delete-button:hover {
+    background-color: rgb(217, 217, 0);
+}
+
+
+#postList{
+    width: 80%;
+}
+
+/* Post input */
+
+#postHeader{
+    margin-bottom: 20px;
+    height: 1rem;
+}
+
+/* Post component */
+
+.post{
+    background-color: #3B3B3B;
+    padding: 0 20px 20px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #555;
+    border-radius: 2px;
+}
+.post-header{
+    font-weight: 700;
+    font-size: 24px;
+}
+.post-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+/* Comment component */
+
+.comment{
+    margin: auto;
+    background-color: #696969;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px 20px 20px;
+}
+.comment-tag{
+    color: #808080;
+}
+
+.show-comments-button{
+    cursor: pointer;
+    color: #808080;
+    font-size: 0.8rem;
+    text-decoration: underline;
+}
