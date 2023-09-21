@@ -20,10 +20,12 @@ function saveDataToFile() {
   fs.writeFileSync('data.json', JSON.stringify(forumData, null, 2), 'utf-8');
 }
 
+// Get all posts
 app.get('/api/posts', (req, res) => {
   res.json(forumData.posts);
 });
 
+// Create a new post
 app.post('/api/posts', (req, res) => {
   const post = req.body;
   if (post) {
@@ -45,56 +47,51 @@ app.post('/api/posts', (req, res) => {
     res.status(400).json({ error: 'Invalid post data' });
   }
 });
-// Route for editing a post
+
+// Edit a post
 app.put('/api/posts/:postId', (req, res) => {
   const postId = parseInt(req.params.postId);
   const newContent = req.body.content;
 
-  // Find the post with the given ID
   const post = forumData.posts.find((p) => p.id === postId);
 
   if (!post) {
     return res.status(404).json({ error: 'Post not found' });
   }
 
-  // Update the post content
   post.content = newContent;
   saveDataToFile();
 
-  // Return the updated post
   res.json(post);
 });
 
-// Route for deleting a post
+// Delete a post
 app.delete('/api/posts/:postId', (req, res) => {
   const postId = parseInt(req.params.postId);
 
-  // Find the index of the post with the given ID
   const postIndex = forumData.posts.findIndex((p) => p.id === postId);
 
   if (postIndex === -1) {
     return res.status(404).json({ error: 'Post not found' });
   }
 
-  // Remove the post from the array
   forumData.posts.splice(postIndex, 1);
   saveDataToFile();
 
   res.status(204).send();
 });
-// Route for adding a comment to a post
+
+// Add a comment to a post
 app.post('/api/posts/:postId/comments', (req, res) => {
   const postId = parseInt(req.params.postId);
   const commentContent = req.body.content;
 
-  // Find the post with the given ID
   const post = forumData.posts.find((p) => p.id === postId);
 
   if (!post) {
     return res.status(404).json({ error: 'Post not found' });
   }
 
-  // Create a new comment
   const newComment = {
     id: post.comments.length + 1,
     content: commentContent,
@@ -105,54 +102,47 @@ app.post('/api/posts/:postId/comments', (req, res) => {
   res.json(newComment);
 });
 
-// Route for editing a comment
+// Edit a comment
 app.put('/api/posts/:postId/comments/:commentId', (req, res) => {
   const postId = parseInt(req.params.postId);
   const commentId = parseInt(req.params.commentId);
   const newContent = req.body.content;
 
-  // Find the post with the given ID
   const post = forumData.posts.find((p) => p.id === postId);
 
   if (!post) {
     return res.status(404).json({ error: 'Post not found' });
   }
 
-  // Find the comment with the given ID
   const comment = post.comments.find((c) => c.id === commentId);
 
   if (!comment) {
     return res.status(404).json({ error: 'Comment not found' });
   }
 
-  // Update the comment content
   comment.content = newContent;
   saveDataToFile();
 
-  // Return the updated comment
   res.json(comment);
 });
 
-// Route for deleting a comment
+// Delete a comment
 app.delete('/api/posts/:postId/comments/:commentId', (req, res) => {
   const postId = parseInt(req.params.postId);
   const commentId = parseInt(req.params.commentId);
 
-  // Find the post with the given ID
   const post = forumData.posts.find((p) => p.id === postId);
 
   if (!post) {
     return res.status(404).json({ error: 'Post not found' });
   }
 
-  // Find the index of the comment with the given ID
   const commentIndex = post.comments.findIndex((c) => c.id === commentId);
 
   if (commentIndex === -1) {
     return res.status(404).json({ error: 'Comment not found' });
   }
 
-  // Remove the comment from the array
   post.comments.splice(commentIndex, 1);
   saveDataToFile();
 

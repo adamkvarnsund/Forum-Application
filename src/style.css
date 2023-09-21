@@ -1,9 +1,13 @@
+/* Reset default styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color:#3B3B3B;
+    background-color: #3B3B3B;
+    padding-bottom: 300px;
 }
+
+/* Header styles */
 header {
     display: flex;
     justify-content: center;
@@ -14,6 +18,7 @@ header {
     padding: 2em;
 }
 
+/* Post container styles */
 .post-container {
     display: flex;
     justify-content: center;
@@ -21,28 +26,37 @@ header {
     flex-direction: column;
     max-width: 800px;
     margin: 20px auto;
+    margin-top: 40px;
     margin-bottom: 100px;
     background-color: #1E1E1E;
     padding: 20px;
+    padding-bottom: 400px;
     border-radius: 1px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color: white;
 }
-.post-container h2{
+
+.post-container h2 {
     width: 80%;
 }
-.post-form{
+
+/* Post form styles */
+.post-form {
     width: 80%;
     margin-bottom: 20px;
 }
-#postContent{
+
+#postContent {
     height: 4em;
     margin-bottom: 20px;
 }
-.post-date{
-    color: #808080;
+.post-content{
+    word-wrap: break-word;
 }
-.post-form textarea, .comment-form textarea {
+
+/* Textarea styles for post and comment inputs */
+.post-form textarea,
+.comment-form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -50,6 +64,7 @@ header {
     resize: none;
 }
 
+/* Button styles */
 .post-button {
     display: inline-block;
     padding: 10px 40px;
@@ -61,7 +76,10 @@ header {
     border-radius: 1px;
     cursor: pointer;
 }
-.comment-button, .edit-button, .delete-button{
+
+.comment-button,
+.edit-button,
+.delete-button {
     display: inline-block;
     padding: 5px 10px;
     margin: 0 20px 0 0;
@@ -73,7 +91,9 @@ header {
     border-radius: 1px;
     cursor: pointer;
 }
-.edit-comment-button, .delete-comment-button{
+
+.edit-comment-button,
+.delete-comment-button {
     display: inline-block;
     padding: 5px 10px;
     margin: 0 5px 0 0;
@@ -86,45 +106,54 @@ header {
     cursor: pointer;
 }
 
-.post-button:hover, .comment-button:hover, .edit-button:hover, .delete-button:hover {
+/* Button hover styles */
+.post-button:hover,
+.comment-button:hover,
+.edit-button:hover,
+.delete-button:hover {
     background-color: rgb(217, 217, 0);
 }
 
-
-#postList{
+/* Post list container styles */
+#postList {
     width: 80%;
 }
 
-/* Post input */
-
-#postHeader{
+/* Post input styles */
+#postHeader {
     margin-bottom: 20px;
     height: 1rem;
 }
 
-/* Post component */
-
-.post{
+/* Post component styles */
+.post {
     background-color: #3B3B3B;
     padding: 0 20px 20px 20px;
     margin-bottom: 20px;
     border: 1px solid #555;
     border-radius: 2px;
 }
-.post-header{
+
+.post-header {
     font-weight: 700;
     font-size: 24px;
+    word-wrap: break-word;
+    max-width: 500px;
 }
-.post-info{
+
+.post-info {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-direction: row-reverse;
+    max-width: 800px;
+    justify-content: space-between;
+}
+.post-date {
+    color: #808080;
+    margin-top: 20px;
 }
 
-/* Comment component */
-
-.comment{
+/* Comment component styles */
+.comment {
     margin: auto;
     background-color: #696969;
     margin-top: 20px;
@@ -132,13 +161,41 @@ header {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     padding: 10px 20px 20px 20px;
 }
-.comment-tag{
+
+.comment-tag {
     color: #808080;
 }
 
-.show-comments-button{
+/* Show comments button styles */
+.show-comments-button {
     cursor: pointer;
     color: #808080;
     font-size: 0.8rem;
     text-decoration: underline;
+}
+
+/* Sort container styles */
+.sort-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 80%;
+}
+
+/* Sort options styles */
+.sort-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.signature{
+    position: relative;
+    left: 20px;
+    bottom: -280px;
+    color: #1E1E1E;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 300;
 }

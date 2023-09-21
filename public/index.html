@@ -12,7 +12,17 @@
         <h1>Seddit</h1>
     </header>
     <div class="post-container">
-        <h2>Create new post</h2>
+        <div class="sort-container">
+            <div class="sort-options">
+                <label for="sortSelect">Sort</label>
+                <select id="sortSelect" onchange="sortOrder()">
+                    <option value="newest">Newest</option>    
+                    <option value="alphabetical">Title</option>
+                    <option value="reverse-alphabetical">Title (reverse)</option>
+                </select>
+            </div>
+            <h2>Create new post</h2>
+        </div>
         <div class="post-form">
             <textarea id="postHeader" placeholder="Write your title here"></textarea>
             <textarea id="postContent" placeholder="Write your text here"></textarea>
@@ -21,6 +31,7 @@
         <h2>Posts</h2>
         <div id="postList"></div>
     </div>
+    <a href="https://github.com/adamkvarnsund" class="signature">Made by Adam Kvarnsund</a>
     <script src="../src/app.js"></script>
 </body>
 </html>

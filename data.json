@@ -1,11 +1,3 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "header": "adad",
-      "content": "ada",
-      "date": "2023-09-21",
-      "comments": []
-    }
-  ]
+  "posts": []
 }
