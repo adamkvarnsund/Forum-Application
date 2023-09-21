@@ -25,13 +25,6 @@ async function renderPosts() {
     const postList = document.getElementById('postList');
     postList.innerHTML = '';
 
-    // Check the sortOrder and sort the posts accordingly
-    if (sortOrder === 'ascending') {
-      posts.sort((a, b) => a.header.localeCompare(b.header));
-    } else if (sortOrder === 'descending') {
-      posts.sort((a, b) => b.header.localeCompare(a.header));
-    }
-
     posts.forEach((post) => {
       const postDiv = document.createElement('div');
       postDiv.className = 'post';
@@ -103,14 +96,6 @@ async function renderPosts() {
   }
 }
 
-
-function sortOrder() {
-  const sortSelect = document.getElementById('sortSelect');
-  const selectedValue = sortSelect.value;
-
-  // Call renderPosts with the selected sorting order
-  renderPosts(selectedValue);
-}
 async function addPost() {
   const postHeader = document.getElementById('postHeader').value;
   const postContent = document.getElementById('postContent').value;
