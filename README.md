@@ -26,7 +26,7 @@ Just paste this into a web browser and the application will be running.
 
 ## Time Spent
 
-The amount of time spent on this assignment is about 10 hours
+The amount of time spent on this assignment was about 10 hours
 
 
 ## Description
