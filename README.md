@@ -31,4 +31,4 @@ The amount of time spent on this assignment was about 10 hours
 
 ## Description
 
-The project is an application similar to Hacker News or Reddit, where the user is able to post about desired topics and then recieve comments about their post. Comments are highlighted in a different shade with indentation to distinguish them from the posts. The user is able to post and comment as many times as they wish.
+The project is an application similar to Hacker News or Reddit, where the user is able to post about desired topics and then recieve comments about their post. Comments are highlighted in a different shade with indentation to distinguish them from the posts. The user is able to post and comment as many times as they wish. Then sort the posts either in alphabetical, reverse-alphabetical order, or just to show the latest post first.
