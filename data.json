@@ -2,35 +2,9 @@
   "posts": [
     {
       "id": 1,
-      "header": "ded",
-      "content": "ede",
-      "date": "2023-09-21",
-      "comments": [
-        {
-          "id": 1,
-          "content": "e"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "header": "e",
-      "content": "e",
-      "date": "2023-09-21",
-      "comments": []
-    },
-    {
-      "id": 3,
-      "header": "a",
-      "content": "a",
-      "date": "2023-09-21",
-      "comments": []
-    },
-    {
-      "id": 4,
-      "header": "a",
-      "content": "a",
-      "date": "2023-09-21",
+      "header": "Noa suger",
+      "content": "Idag har jag kommit på att Noa är riktigt dålig",
+      "date": "2024-02-29",
       "comments": []
     }
   ]
