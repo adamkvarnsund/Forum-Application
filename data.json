@@ -1,4 +1,11 @@
 {
   "posts": [
+    {
+      "id": 1,
+      "header": "Noa suger",
+      "content": "Idag har jag kommit på att Noa är riktigt dålig",
+      "date": "2024-02-29",
+      "comments": []
+    }
   ]
 }
